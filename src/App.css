@@ -5,18 +5,18 @@
 body {
   text-align: center; 
   color: white;
-  background-color: black;
-  font-family: sans-serif;
+  background-color:#E4D4C8;
+  font-family: 'Maloney', sans-serif;
 }
 
 h1 {
-  color:  #ff69b4;
-  text-shadow: -3px 0 white, 0 3px white, 3px 0 white, 0 -3px white;
+  color: #523A28;
   text-align: center;
+  font-size: 5em;
 } 
 
 .card h1 {
-  font-size: 1.25em;
+  font-size: 5em;
 } 
 
 .cards {
@@ -28,8 +28,9 @@ h1 {
 .card {
   /* width: 300px;
   height: 500px; */
+  color: #523A28;
   margin: 10px;
-  background-color: #0dff00;
+  background-color: #ACBAAD;
   border-radius: 10px;
 }
 
