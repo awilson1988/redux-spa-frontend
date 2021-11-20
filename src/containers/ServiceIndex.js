@@ -1,13 +1,16 @@
 import { useEffect } from "react"
 import {getServices} from '../redux/actionCreators'
 import { connect } from 'react-redux'
+import ServiceCard from "../components/ServiceCard"
 
 function ServiceIndex({getServices, services}){
     useEffect(() => services.length === 0 && getServices(), [services])
    
 
 
-    return<h1>Services Go here!</h1>
+    return <div className="cards">
+        {services.map(service => <ServiceCard {...service} key={service.id}/>)}
+    </div>
 }
 
 const mapStateToProps = (state) => {
