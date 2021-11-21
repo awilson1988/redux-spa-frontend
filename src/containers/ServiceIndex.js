@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import ServiceCard from "../components/ServiceCard"
 
 function ServiceIndex({getServices, services}){
-    useEffect(() => services.length === 0 && getServices(), [services])
+    useEffect(getServices, [getServices])
    
 
 
