@@ -1,7 +1,6 @@
 
 import './App.css';
-import ServiceIndex from './containers/ServiceIndex';
-import ServiceShow from './components/ServiceShow';
+import { ServiceIndex, ServiceShow } from './components';
 import { Switch, Route } from 'react-router-dom'
 
 function App() {

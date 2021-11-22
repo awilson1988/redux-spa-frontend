@@ -1,7 +1,8 @@
-export default function ServiceCard({typeOfService, price, duration}){
+import { Link } from 'react-router-dom'
 
-    return <div className="card">
-        <h3>{typeOfService}</h3>
+export default function ServiceCard({id, typeOfService, price, duration}){
+  return <div className="card">
+        <Link to={`/services/${id}`}><h3>{typeOfService}</h3></Link>
         <p>{price}</p> 
         <p>{duration}</p>
     </div>

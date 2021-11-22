@@ -1,6 +1,9 @@
-function ServiceShow(props){
+import { useParams } from 'react-router-dom'
 
-    return <h1>You're in the show page</h1>
+function ServiceShow(props){
+const routeId = useParams().id
+
+    return <h1>You're in the show page now</h1>
 
 }
 

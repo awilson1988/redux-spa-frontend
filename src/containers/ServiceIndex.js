@@ -1,7 +1,7 @@
 import { useEffect } from "react"
 import {getServices} from '../redux/actionCreators'
 import { connect } from 'react-redux'
-import ServiceCard from "../components/ServiceCard"
+import { ServiceCard } from "../components"
 
 function ServiceIndex({getServices, services}){
     useEffect(getServices, [getServices])
