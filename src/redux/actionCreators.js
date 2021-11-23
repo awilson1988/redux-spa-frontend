@@ -6,10 +6,11 @@ export const getServices = () => {
 } 
 
 export const getService = (id) => {
-    return dispatch => fetch('http://localhost:3000/services/${id}')
+    return dispatch => fetch(`http://localhost:3000/services/${id}`)
     .then(res => res.json())
     .then(service => dispatch({type: "GET_SERVICE", payload: service})
     )
 }
 
+export const clearService = () => ({type: "CLEAR_SERVICE"})
 

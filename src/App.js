@@ -1,6 +1,6 @@
 
 import './App.css';
-import { ServiceIndex, ServiceShow } from './components';
+import { ServiceIndex, ServiceShow, Nav } from './components';
 import { Switch, Route } from 'react-router-dom'
 
 function App() {
@@ -8,6 +8,7 @@ function App() {
     <div className="App">
       <>
       <h1>Redux Spa</h1>
+      <Nav></Nav>
       <Switch>
         <Route path="/services/:id"><ServiceShow/></Route>
         <Route path="/services"><ServiceIndex/></Route>
