@@ -14,3 +14,13 @@ export const getService = (id) => {
 
 export const clearService = () => ({type: "CLEAR_SERVICE"})
 
+export const submitSignup = (user) => {
+    return dispatch => fetch("http://localhost:3000/users",  {
+        method: 'POST', // or 'PUT'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      })
+}
+

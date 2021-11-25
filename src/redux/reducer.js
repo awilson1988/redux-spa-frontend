@@ -5,9 +5,14 @@ const initialService = {
     imageURL: ""  
 }
 
+
+
 const initialState = {
     services: [],
-    selectedService: initialService 
+    selectedService: initialService,
+    user: {
+      username: "" 
+    }
 }
 
 export default function reducer(state=initialState, action){

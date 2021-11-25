@@ -1,23 +1,28 @@
 
 import './App.css';
-import { ServiceIndex, ServiceShow, Nav } from './components';
+import { ServiceIndex, ServiceShow, Nav, Auth } from './components';
 import { Switch, Route } from 'react-router-dom'
+import { connect } from 'react-redux';
 
-function App() {
+function App(props) {
+  console.log(props)
   return (
-    <div className="App">
       <>
       <h1>Redux Spa</h1>
-      <Nav></Nav>
+      <Nav/>
+      { props.user.username ? 
       <Switch>
         <Route path="/services/:id"><ServiceShow/></Route>
         <Route path="/services"><ServiceIndex/></Route>
-      </Switch>
+        <Route exact path="/"><ServiceIndex/></Route>
+      </Switch> :
+      <Auth/> 
+    }
       </>
-    </div>
+    
   );
 }
 
+const mapStateToProps = (state) => ({user: state.user})
 
-
-export default App;
+export default connect(mapStateToProps) (App);
