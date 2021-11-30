@@ -23,6 +23,8 @@ export default function reducer(state=initialState, action){
           return {...state, selectedService: action.payload}
         case "CLEAR_SERVICE": 
           return {...state, selectedService: initialService}
+          case "SET_USER": 
+          return {...state, user: action.payload};
         default: 
             return {...state}
     }
