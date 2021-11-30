@@ -5,7 +5,7 @@ import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux';
 
 function App(props) {
-  console.log(props)
+  console.log(localStorage.token)
   return (
       <>
       <h1>Redux Spa</h1>
