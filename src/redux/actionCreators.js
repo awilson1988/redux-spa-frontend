@@ -28,6 +28,8 @@ export const getEmployee = (id) => {
   )
 }
 
+export const clearEmployee = () => ({type: "CLEAR_EMPLOYEE"})
+
 export const submitSignup = (user) => {
     return dispatch => fetch("http://localhost:3000/users",  {
         method: 'POST', // or 'PUT'
