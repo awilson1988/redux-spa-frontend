@@ -57,4 +57,11 @@ export const autoLogin = () => {
   }) 
 }
 
+export const logout = () => {
+  return dispatch => {
+    localStorage.clear()
+    dispatch({type: "LOGOUT"})
+  }
+}
+
 
