@@ -14,6 +14,12 @@ export const getService = (id) => {
 
 export const clearService = () => ({type: "CLEAR_SERVICE"})
 
+export const getEmployees = () => {
+  return dispatch => fetch("http://localhost:3000/employees")
+  .then(res => res.json())
+  .then(employees => dispatch({type: "GET_EMPLOYEES", payload: employees})
+  )
+}  
 export const submitSignup = (user) => {
     return dispatch => fetch("http://localhost:3000/users",  {
         method: 'POST', // or 'PUT'

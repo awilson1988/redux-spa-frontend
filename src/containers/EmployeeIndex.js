@@ -1,10 +1,20 @@
 import { useEffect } from "react"
 import {getEmployees} from '../redux/actionCreators'
 import { connect } from 'react-redux'
-import { ServiceCard } from "../components"
+import { EmployeeCard } from "../components"
 
-function EmployeeIndex () {
-    
-    return <h1>Employees</h1>
+function EmployeeIndex({getEmployees, employees}){
+    useEffect(getEmployees, [getEmployees])
+   
+
+
+    return <div className="cards">
+        {employees.map(employee => <EmployeeCard {...employee} key={employee.id}/>)}
+    </div>
 }
- export default (EmployeeIndex)
+
+const mapStateToProps = (state) => {
+    return {employees: state.employees}
+}
+
+export default connect(mapStateToProps, { getEmployees })(EmployeeIndex)

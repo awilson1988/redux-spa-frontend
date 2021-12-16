@@ -14,6 +14,7 @@ const initialUser = {
 
 const initialState = {
     services: [],
+    employees: [],
     selectedService: initialService,
     user: initialUser
 }
@@ -26,6 +27,8 @@ export default function reducer(state=initialState, action){
           return {...state, selectedService: action.payload}
         case "CLEAR_SERVICE": 
           return {...state, selectedService: initialService}
+        case "GET_EMPLOYEES":
+          return {...state, employees: action.payload}
         case "SET_USER": 
           return {...state, user: action.payload};
         case "LOGOUT": 
