@@ -2,7 +2,16 @@ const initialService = {
     typeOfService: "",
     price: "", 
     duration: "",
+    benefits:"",
     imageURL: ""  
+}
+
+const initialEmployee = {
+    name: "",
+    title: "", 
+    bio: "", 
+    education: "", 
+    imageURL: "" 
 }
 
 
@@ -16,6 +25,7 @@ const initialState = {
     services: [],
     employees: [],
     selectedService: initialService,
+    selectedEmployee: initialEmployee,
     user: initialUser
 }
 
@@ -29,6 +39,8 @@ export default function reducer(state=initialState, action){
           return {...state, selectedService: initialService}
         case "GET_EMPLOYEES":
           return {...state, employees: action.payload}
+        case "GET_EMPLOYEE": 
+          return {...state, selectedEmployee: action.payload}
         case "SET_USER": 
           return {...state, user: action.payload};
         case "LOGOUT": 

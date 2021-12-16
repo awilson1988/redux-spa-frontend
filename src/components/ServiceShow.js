@@ -4,7 +4,7 @@ import { getService, clearService } from '../redux/actionCreators'
 import { useEffect } from 'react'
 
 
-function ServiceShow({getService, typeOfService, price, duration, imageUrl, clearService}){
+function ServiceShow({getService, typeOfService, price, duration, benefits, imageUrl, clearService}){
   const routeId = useParams().id
   
   
@@ -19,6 +19,7 @@ useEffect(() => {
       <h1>{typeOfService}</h1>
       <p>{price}</p>
       <p>{duration}</p>
+      <p>{benefits}</p>
     </div>
 
 }

@@ -20,6 +20,14 @@ export const getEmployees = () => {
   .then(employees => dispatch({type: "GET_EMPLOYEES", payload: employees})
   )
 }  
+
+export const getEmployee = (id) => {
+  return dispatch => fetch(`http://localhost:3000/employees/${id}`)
+  .then(res => res.json())
+  .then(employee => dispatch({type: "GET_EMPLOYEE", payload: employee})
+  )
+}
+
 export const submitSignup = (user) => {
     return dispatch => fetch("http://localhost:3000/users",  {
         method: 'POST', // or 'PUT'
