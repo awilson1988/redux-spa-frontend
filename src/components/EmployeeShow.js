@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getEmployee, clearEmployee } from '../redux/actionCreators'
 import { useEffect } from 'react'
+import { Comments } from './'
 
 function EmployeeShow({getEmployee, name, title, bio, education, imageUrl, clearEmployee}) {
     const routeId = useParams().id
@@ -19,6 +20,7 @@ function EmployeeShow({getEmployee, name, title, bio, education, imageUrl, clear
           <p>{title}</p>
           <p>{bio}</p>
           <p>{education}</p>
+          <Comments/>
         </div>
     
     }

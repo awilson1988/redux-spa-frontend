@@ -11,7 +11,8 @@ const initialEmployee = {
     title: "", 
     bio: "", 
     education: "", 
-    imageURL: "" 
+    imageURL: "", 
+    comments: [] 
 }
 
 
