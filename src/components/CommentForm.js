@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { submitComment } from '../redux/actionCreators'
 
 
-function CommentForm(employeeId, submitComment){
+function CommentForm({employeeId, submitComment}){
 
     const [content, setContent] = useState("")
 

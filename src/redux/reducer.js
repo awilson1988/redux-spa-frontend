@@ -47,6 +47,8 @@ export default function reducer(state=initialState, action){
           return {...state, selectedEmployee: initialEmployee}
         case "SET_USER": 
           return {...state, user: action.payload};
+        case "ADD_COMMENT":
+          return {...state, selectedEmployee: {...state.selectedEmployee, comments: [action.payload, ...state.selectedEmployee.comments]}}
         case "LOGOUT": 
           return {...state, user: initialUser}
         default: 
