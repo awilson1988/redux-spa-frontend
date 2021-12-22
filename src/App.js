@@ -20,6 +20,7 @@ function App({user, autoLogin}) {
         <Route path="/services"><ServiceIndex/></Route>
         <Route path="/employees/:id"><EmployeeShow/></Route>
         <Route path="/employees"><EmployeeIndex></EmployeeIndex></Route>
+        <Route path="/contact"><ContactUs></ContactUs></Route>
         <Route exact path="/"><ServiceIndex/></Route>
       </Switch> :
       <Auth/> 

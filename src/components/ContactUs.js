@@ -1,5 +1,4 @@
 import React, { useRef}  from 'react'; 
-import { connect } from 'react-redux'
 import emailjs from 'emailjs-com'; 
 
 export const ContactUs = () => {
@@ -8,12 +7,13 @@ export const ContactUs = () => {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('gmail', 'template_svcqwpo', form.current, 'user_DcicovIVQqPpPtWQA9urK')
+      emailjs.sendForm('service_wpcj27a', 'template_svcqwpo', e.target, 'user_DcicovIVQqPpPtWQA9urK')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
             console.log(error.text);
         });
+        e.target.reset()
     };
 
     return (
@@ -34,3 +34,9 @@ export const ContactUs = () => {
 }
 
 export default ContactUs
+
+// function ContactUs() {
+//   return <h1>Hi</h1>
+// }
+
+// export default ContactUs

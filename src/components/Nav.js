@@ -9,7 +9,7 @@ function Nav({logout, username}){
   const loggedInRender = () => <nav>
     <NavLink to="/services"><button>See All Services</button></NavLink>
     <NavLink to="/employees"><button>About Us</button></NavLink>
-    <button>Contact Us</button>
+    <NavLink to="/contact"><button>Contact Us</button></NavLink>
     <button onClick={logout}>Logout</button>
   </nav>
 
