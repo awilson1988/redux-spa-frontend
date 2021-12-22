@@ -16,7 +16,7 @@ useEffect(() => {
 
 
     return <div className="show">
-      <h1>{typeOfService}</h1>
+      <h2>{typeOfService}</h2>
       <p>{price}</p>
       <p>{duration}</p>
       <p>{benefits}</p>

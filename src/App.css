@@ -2,6 +2,14 @@
   text-align: center;
 }
 
+button {
+  background-color: white;
+  padding: 15px 32px;
+  display: inline-flex;
+  margin-left: 10px;
+  background-color: rgb(188, 188, 238);
+}
+
 body {
   text-align: center; 
   color: #523A28;
@@ -9,10 +17,12 @@ body {
   font-family: 'Maloney', sans-serif;
 }
 
+
+
 h1 {
   color: #523A28;
   text-align: center;
-  font-size: 5em;
+  font-size: 7em;
 } 
 
 
@@ -36,6 +46,7 @@ h1 {
 }
 
 .card img {
+  margin-top: 10px;
   margin: 10px;
   width: 300px;
   height: 200px;
@@ -44,6 +55,36 @@ h1 {
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.show {
+  background-color: #FDDDA4;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: .5em;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+.comment {
+  background-color: #ACBAAD;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: .5em;
+  border-radius: 5px;
+  padding: 1em;
+}
+
+textarea {
+  width: 80%;
+  font-size: .8em;
+  height: 6em;
+  border-radius: 10px;
+}
+
+
+nav {
+  margin-bottom: 20px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
