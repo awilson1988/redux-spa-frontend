@@ -1,8 +1,8 @@
 import { NavLink }  from 'react-router-dom'
 import { connect } from 'react-redux'
 import { logout } from '../redux/actionCreators'
-import { sendForm } from 'emailjs-com'
-import { ContactUs } from '.'
+// import { sendForm } from 'emailjs-com'
+// import { ContactUs } from '.'
 
 function Nav({logout, username}){
   

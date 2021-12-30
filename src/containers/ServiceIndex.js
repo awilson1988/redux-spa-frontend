@@ -6,9 +6,12 @@ import { ServiceCard } from "../components"
 function ServiceIndex({getServices, services}){
     useEffect(getServices, [getServices])
    
-
+function Sort () {
+ 
+}
 
     return <div className="cards">
+        <button>Sort</button>
         {services.map(service => <ServiceCard {...service} key={service.id}/>)}
     </div>
 }
