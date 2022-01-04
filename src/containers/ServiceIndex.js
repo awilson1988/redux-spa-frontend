@@ -5,13 +5,13 @@ import { ServiceCard } from "../components"
 
 function ServiceIndex({getServices, services}){
     useEffect(getServices, [getServices])
-   
-function Sort () {
- 
-}
+
+    const sortedServices = () => {
+        services.sort((a, b) => (a.duration > b.duration) ? 1 : -1)
+    }
 
     return <div className="cards">
-        <button>Sort</button>
+        <button onClick={sortedServices}>Sort</button>
         {services.map(service => <ServiceCard {...service} key={service.id}/>)}
     </div>
 }
