@@ -1,7 +1,7 @@
 // import {getServices} from '../redux/actionCreators'
 
 function SortedServiceCards() {
-    console.log("Hello World")
+    console.log("HEYHEY")
     
     // const sortServices = () => {
     //     {services.sort((a, b) => (a.duration > b.duration) ? 1 : -1)}
