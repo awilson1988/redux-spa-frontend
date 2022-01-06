@@ -12,6 +12,9 @@ export const getService = (id) => {
     )
 }
 
+// export const sortServices = {
+//   sortType : 'asc',
+// }
 export const clearService = () => ({type: "CLEAR_SERVICE"})
 
 export const getEmployees = () => {

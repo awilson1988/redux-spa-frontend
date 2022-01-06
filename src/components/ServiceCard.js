@@ -5,5 +5,6 @@ export default function ServiceCard({id, typeOfService, price, duration, imageUr
         <Link to={`/services/${id}`}><img src={imageUrl} alt={typeOfService}/></Link>
         <Link to={`/services/${id}`}><h3>{typeOfService}</h3></Link>
         <p>{duration}</p>
+        
     </div>
 }

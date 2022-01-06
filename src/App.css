@@ -10,6 +10,12 @@ button {
   background-color: rgb(188, 188, 238);
 }
 
+sort {
+
+  text-align: center;
+
+}
+
 body {
   text-align: center; 
   color: #523A28;
