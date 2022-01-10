@@ -1,13 +1,14 @@
 import { useEffect } from "react"
 import {getServices} from '../redux/actionCreators'
+import { NavLink }  from 'react-router-dom'
 import { connect } from 'react-redux'
-import { ServiceCard, SortedServiceCards } from "../components"
+import { ServiceCard } from "../components"
+import { SortedServiceCards } from "../components"
 
 function ServiceIndex({getServices, services}){
     useEffect(getServices, [getServices])
     return <div> 
-        <button className="sort" onClick={SortedServiceCards}>Sort</button>
-        
+        <NavLink to="/services/?sort=duration"><button>Sort</button></NavLink>
         {services.map(service => <ServiceCard {...service} key={service.id}/>)} 
     </div>
 }

@@ -1,6 +1,6 @@
 
 import './App.css';
-import { ServiceIndex, ServiceShow, EmployeeIndex, EmployeeShow, ContactUs, Nav, Auth } from './components';
+import { ServiceIndex, ServiceShow, SortedServiceCards, EmployeeIndex, EmployeeShow, ContactUs, Nav, Auth } from './components';
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux';
 import { useEffect } from 'react'
@@ -18,6 +18,7 @@ function App({user, autoLogin}) {
       <Switch>
         <Route path="/services/:id"><ServiceShow/></Route>
         <Route path="/services"><ServiceIndex/></Route>
+        <Route path="/services/?sort=duration"><SortedServiceCards/></Route>
         <Route path="/employees/:id"><EmployeeShow/></Route>
         <Route path="/employees"><EmployeeIndex></EmployeeIndex></Route>
         <Route path="/contact"><ContactUs></ContactUs></Route>
