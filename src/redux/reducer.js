@@ -37,6 +37,8 @@ export default function reducer(state=initialState, action){
           return {...state, services: action.payload} 
         case "GET_SERVICE":
           return {...state, selectedService: action.payload}
+        case "GET_SORTED_SERVICES":
+            return {...state, services: action.payload}
         case "CLEAR_SERVICE": 
           return {...state, selectedService: initialService}
         case "GET_EMPLOYEES":

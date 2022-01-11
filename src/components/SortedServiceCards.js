@@ -1,6 +1,8 @@
-// import {getServices} from '../redux/actionCreators'
+//  import {getServices} from '../redux/actionCreators'
+// import { useState } from 'react'
+// import { connect } from 'react-redux' 
 
-function SortedServiceCards(props) {
+function SortedServiceCards() {
      console.log("HEYHEY")
     
     // const sortServices = () => {
@@ -14,4 +16,4 @@ function SortedServiceCards(props) {
     
 }
 
-export default SortedServiceCards
+export default SortedServiceCards;

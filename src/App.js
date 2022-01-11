@@ -16,9 +16,9 @@ function App({user, autoLogin}) {
       <Nav/>
       { user.username ? 
       <Switch>
+        <Route path="/services/?sort=duration"><SortedServiceCards/></Route>
         <Route path="/services/:id"><ServiceShow/></Route>
         <Route path="/services"><ServiceIndex/></Route>
-        <Route path="/services/?sort=duration"><SortedServiceCards/></Route>
         <Route path="/employees/:id"><EmployeeShow/></Route>
         <Route path="/employees"><EmployeeIndex></EmployeeIndex></Route>
         <Route path="/contact"><ContactUs></ContactUs></Route>
