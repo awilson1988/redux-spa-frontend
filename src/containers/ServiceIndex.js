@@ -1,14 +1,24 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import {getServices} from '../redux/actionCreators'
 import { NavLink }  from 'react-router-dom'
 import { connect } from 'react-redux'
 import { ServiceCard } from "../components"
 
 function ServiceIndex({getServices, services}){
+    const [isSorted, setIsSorted] = useState(false);
+    
     useEffect(getServices, [getServices])
-    return <div> 
-        {services.map(service => <ServiceCard {...service} key={service.id}/>)} 
-    </div>
+
+    const renderServices = () => {
+        return isSorted ? services.concat([]).sort((a, b) => parseInt(a.duration) - parseInt(b.duration))  : services
+      }
+    
+    return (
+        <div>
+          <button onClick={() => setIsSorted(true)}>Sort</button>
+          {renderServices().map(service => <ServiceCard {...service} key={service.id}/>)}
+        </div>
+      )
 }
 
 const mapStateToProps = (state) => {

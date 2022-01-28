@@ -1,6 +1,6 @@
-//  import {getServices} from '../redux/actionCreators'
-// import { useState } from 'react'
-// import { connect } from 'react-redux' 
+import {getServices} from '../redux/actionCreators'
+import { useState } from 'react'
+import { connect } from 'react-redux' 
 
 function SortedServiceCards() {
      console.log("HEYHEY")
