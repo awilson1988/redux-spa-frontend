@@ -10,7 +10,6 @@ function Nav({logout, username}){
     <NavLink to="/services"><button>See All Services</button></NavLink>
     <NavLink to="/employees"><button>About Us</button></NavLink>
     <NavLink to="/contact"><button>Contact Us</button></NavLink>
-    <NavLink to="/services/?sort=duration"><button>Sort</button></NavLink>
     <button onClick={logout}>Logout</button>
   </nav>
 

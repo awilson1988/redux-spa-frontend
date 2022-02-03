@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import {getServices} from '../redux/actionCreators'
-import { NavLink }  from 'react-router-dom'
 import { connect } from 'react-redux'
 import { ServiceCard } from "../components"
 
